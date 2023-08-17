@@ -1,0 +1,2 @@
+-- **** select 문 실행순서 !중요!
+-- from > where > group by > having > select > order by
