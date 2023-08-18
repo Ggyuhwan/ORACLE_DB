@@ -173,7 +173,7 @@ where cart_member = 'a001';
 
 SELECT member.mem_id
       ,member.mem_name
-      ,COUNT(distinct cart.cart_no) as 카트사용횟수
+      ,COUNT(distinct cart.cart_no) as 카트사용횟수 
       ,COUNT(cart.cart_member) as 상품품목건수
       ,SUM (NVL(cart.cart_qty,0)) as 상품구매수량
       ,sum(NVL(cart.cart_qty * prod.prod_sale,0))
@@ -225,3 +225,28 @@ FROM employees
 WHERE emp_name LIKE 'K%'
 ORDER BY emp_name;
 
+
+ SELECT member.mem_id
+      ,member.mem_name
+      ,COUNT(distinct cart.cart_no) as 카트사용횟수
+      ,COUNT(cart.cart_member) as 상품품목건수
+      ,SUM(cart.cart_qty) as 상품구매수량
+      ,sum(cart.cart_qty * prod.prod_sale)
+     FROM MEMBER, CART, PROD
+WHERE member.mem_id = cart.cart_member(+)
+AND cart.cart_prod = prod.prod_id(+)
+GROUP BY member.mem_id,member.MEM_NAME
+ORDER BY 6 DESC
+
+/* ANSI OUTER JOIN*/
+select a.mem_id
+, a.mem_name
+,COUNT(DISTINCT b.cart_no)
+,COUNT(c.prod_id)
+FROM  member a
+LEFT OUTER JOIN cart b
+ON (a.mem_id = b.cart_member)
+LEFT OUTER JOIN prod c
+ON(b.cart_prod = c.prod_id)
+GROUP BY a.mem_id
+,a.mem_name;
