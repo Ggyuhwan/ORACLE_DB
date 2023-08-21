@@ -38,12 +38,14 @@ FROM customer
 WHERE job = '의사'
 AND substr(birth,1,4) >= 1988;
 desc customer;
-SELECT birth,
-job
+SELECT job,
+to_char(to_date(birth),'yyyy')
 FROM customer
-where job in ('의사','자영업')
-and birth >= 1988
-;
+where job in ('자영업','의사')
+and substr(birth,1,4) >= 1988;
+
+
+
 -----------2번 문제 ---------------------------------------------------
 --강남구에 사는 고객의 이름, 전화번호를 출력하시오 
 ---------------------------------------------------------------------
