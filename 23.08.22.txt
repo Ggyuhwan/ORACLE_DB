@@ -1,0 +1,9 @@
+level 가상열로서  트리 내에서 어떤 단계인지 나타내는 정수값
+START WITH parent_id IS NULL                -- 시작
+CONNECT BY PRIOR department_id = parent_id; -- 계층을 어떻게 연결할지 (조건)
+/* 계층형 쿼리에서 정렬을 하려면 SIBLINGS BY 를 추가해야함. */
+ORDER SIBLINGS BY department_name; --SIBLINGS 사용시에는 실제 컬럼으로만 정렬가능
+ ,CONNECT_BY_ISLEAF --마지막노드면1, 자식이 있으면0
+    ,SYS_CONNECT_BY_PATH(department_name,'|') --루트 노드에서 자신행까지 연결정보
+    ,CONNECT_BY_ISCYCLE --무한루프의 원인을 찾을때
+    --(자식이 있는데 그자식 로우가 부모이면 1, 아니면 0
