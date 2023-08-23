@@ -56,3 +56,17 @@ ORDER BY 1;
 ---------- 9번 문제 ----------------------------------------------------
 --매출이력이 있는 고객의 주소, 우편번호, 해당지역 고객수를 출력하시오
 ----------------------------------------------------------------------------
+select a.address_detail,count(a.address_detail)
+from address a, customer b
+where a.zip_code = b.zip_code
+group by a.address_detail
+order by 2 desc;
+
+select a.ADDRESS_DETAIL as 주소
+,count(DISTINCT((CUSTOMER_NAME))) as 카운팅
+from address a, reservation b , customer c
+where a.zip_code = c.zip_code 
+and b.customer_id = c.customer_id
+and b.cancel = 'N'
+group by a.ADDRESS_DETAIL 
+ORDER BY 2 DESC;
