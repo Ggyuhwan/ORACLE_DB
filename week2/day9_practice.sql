@@ -71,11 +71,11 @@ ORDER BY 2 DESC;
 ---------------------------------------------------------------------
 select rownum, e.*
 from(
-SELECT  to_char(to_date(first_reg_date),'day')
-,count(to_char(to_date(first_reg_date),'day'))
-FROM customer
-group by to_char(to_date(first_reg_date),'day') 
-)e
+        SELECT  to_char(to_date(first_reg_date),'day')
+        ,count(to_char(to_date(first_reg_date),'day'))
+        FROM customer
+        group by to_char(to_date(first_reg_date),'day') 
+        )e
 where rownum = 1;
 
 --(DECODE(cust_gender,'M',1)) as 남자;
@@ -91,6 +91,28 @@ NVL(DECODE(sex_code,'M','남자','F','여자','','미등록'),'합계') AS 젠더
 ,count(nvl(sex_code,0)) as 성별합
 FROM customer
 group by  ROLLUP (DECODE(sex_code,'M','남자','F','여자','','미등록'));
+
+select nvl(gender,'합계') ,count (*)
+from (
+         select DECODE(sex_code,'M','남자','F','여자','','미등록') as gender
+        from customer
+        )
+group by  ROLLUP(gender);
+
+-- grouping_id group by 절에서 그룹화를 진행할 때,
+--                          여러 컬럼에 대한 서브 토탈을 쉽게 구별하기 위한 함수
+SELECT CASE WHEN sex_code ='M' THEN '남자'
+            WHEN sex_code ='F' THEN '여자'
+            WHEN sex_code IS NULL AND groupid = 0 THEN '미등록'
+            ELSE '합계'
+            END as gender
+            ,cnt
+FROM (SELECT sex_code
+    ,grouping_id(sex_code) as groupid
+    ,count (*) as cnt
+    FROM customer
+    GROUP BY ROLLUP(sex_code));
+
 --WHere sex_code in ('M','F')
 ----------5번 문제 ---------------------------------------------------
 --월별 예약 취소 건수를 출력하시오 (많은 달 부터 출력)
