@@ -1,0 +1,34 @@
+23.08.25
+분석함수
+
+PARTITION BY 그룹안에서 WINDOW 절을 활용하여 세부 집계를 할 수 있음.
+ AVG,SUM,MAX,MIN,COUNT,RANK,DENSE_RANK,LAG,ROW_NUMBER...
+ PARTITION BY 절 : 계산 대상 그룹
+ ORDER BY     절 : 대상 그룹에대한 정렬
+ WINDOW       절 : 파티션으로 분할된 그룹에 대해 더 상세한 그룹으로 분할
+
+ NTILE(expr) 파티션별로 expr 명시된 값만큼 분할한 결과를 반환
+    NTILE(3) 1 ~ 3 의 수를 반환(분할하는 수를 버킷 수 라고함)
+    NTILE(4) -> 100/4 -> 25% 로 행을 분할
+
+DBMS_RANDOM = 랜덤
+DBMS_RANDOM.STRING('U',5)--알파벳 대문자 5자리 랜덤생성
+,DBMS_RANDOM.STRING('L',5)--소문자
+,DBMS_RANDOM.STRING('A',5)--대소문자
+,DBMS_RANDOM.STRING('X',5)--알파벳 대문자 & 숫자
+,DBMS_RANDOM.STRING('P',5)--알파벳 대문자 & 숫자 & 특수문자
+
+LAG(expr, offset, default_value) 선행로우의 값 참조
+   LEAD(expr, offset, default_value) 후행로우의 값 참조
+
+오후 자바
+Connection Factory
+Connection Pool
+DAO (Data Access Object) DB쿼리문 모아둠
+DTO (Data Transfer Object) OR VO 속성이 일치함
+
+connectionfactory 로 부터 maxConn 수량만큼
+connection 객체를 미리 생성해서 풀(pool)에 보관 관리 하는 클래스
+Vector: 동기화(Synchronized) 가 적용된 ArrayList
+싱글톤
+
