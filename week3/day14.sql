@@ -10,6 +10,7 @@ FROM (
     FROM employees
     )
 WHERE rnk = 1;
+
 ---- 학생 중 전공별 평점이 가장 높은 학생의 정보를 출력하시오
 SELECT *
 FROM(
