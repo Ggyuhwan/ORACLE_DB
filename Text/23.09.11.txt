@@ -1,0 +1,26 @@
+23.09.11
+pandas, pandas sql
+네이버주식 토론방 댓글수집
+counter
+wordcloud
+판다스 특징
+함수가능, 기초통계, null값 처리
+
+코랩 .ipynb 파일 > 다운로드 .py 로 저장가능
+주피터 실행
+터미널 > jupyter notebook
+
+스프링
+서버기동, 디비커넥션, 화면맵핑, 데이터 전달 어떻게 하는지
+
+https://github.com/leeapgil/study-summary/blob/master/WebStudy-Spring.md
+
+C:\Program Files\Java\jdk-11.0.20.101\bin\javaw.exe
+
+스프링 서버 dev 톰캣9.0선택
+9999
+8080
+
+spring legacy project
+
+web.xml, servlet-context, root-context, pom.xml 먼저 확인하기

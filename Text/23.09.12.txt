@@ -1,0 +1,19 @@
+23.09.12
+파이썬 판다스 이용 그래프 그리기
+png,xlsx 저장 
+td find_all
+개인프로젝트
+
+스프링 
+오라클 계정생성 및 로그인 DB생성
+VO 만들기
+세터게터, 생성자, 비어있는 생성자, 투스트링
+pom.xml > dependency 사이에 복붙 > 메이븐 > 업뎃프젝
+root-context 41p 복붙
+src/main/resources 에 폴더생성 mybatis > mybatis-config.xml 복붙 / 42p
+member 패키지안에 dao패키지 > interface 만들기
+mybatis폴더안에 mapper > member.xml 만들기
+쿼리>다오>서비스
+WEB-INF 안에 inc폴더 > top.jsp, footer.jsp
+
+web.xml > root-context-xml 서블릿컨텍스트,DB정보, 경로맵핑, 맵퍼 >  

@@ -1,0 +1,20 @@
+23.08.30
+머신러닝 딥러닝 기초
+아나콘다 및 파이참 설치
+아나콘다
+가상환경 리스트 conda env list
+가상환경 추가 conda create --name bigdata python=3.8
+가상환경 진입 conda activate bigdata
+가상환경 나가기 conda deactivate
+아나콘다 기본 명령어 
+https://github.com/leeapgil/study-summary/blob/master/MachineLearning-env.md
+파이썬
+문자열
+리스트 [] 인덱스, 슬라이스, 타입제약x
+튜플 () 수정x 인덱스, 슬라이스
+딕셔너리 {} 키-벨류
+셋 {} 
+if문
+파이썬 exe파일 만들기 명령어 pip install pyinstaller
+파이썬 exe파일 만들기 pyinstaller --onefile lotto.py
+jsp 서블릿

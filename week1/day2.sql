@@ -68,7 +68,7 @@ ORDER BY hire_date;
 -- 수식 연산자 : + - * /
 SELECT employee_id  as 직원아디이
 , emp_name          as 직원이름
-, salary / 30       as 일당
+, round(salary / 30),3       as 일당
 , salary            as 월급
 , salary - salary * 0.1 as 실수령액
 ,salary * 12        as 연봉

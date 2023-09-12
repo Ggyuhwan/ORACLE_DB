@@ -110,7 +110,7 @@ SELECT stu_name
 ,TO_DATE (STU_BIRTH, 'YYMMDD')
 ,TO_CHAR(TO_DATE(STU_BIRTH, 'YYMMDD'),'YYYY')
 ,TO_CHAR(TO_DATE(stu_birth,'RRMMDD'),'YYYY')
-,TO_CHAR (TO_DATE - (STU_BIRTH,'YYMMDD'),'YYYY')
+,TO_CHAR (TO_DATE  (STU_BIRTH,'YYMMDD'),'YYYY')
 FROM students;
 
 --employees 의 hire_date 컬럼을 활용하여 근속 년수를 출력하시오

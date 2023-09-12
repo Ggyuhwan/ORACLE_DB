@@ -1,0 +1,14 @@
+23.09.05
+텔레그램 
+hwan123_bot
+6409569557:AAGs279Akazn_Yk6haI97aKQA32roMIZWjo
+파이썬 텔레그램 채팅봇 만들기
+	Selenium 스크롤내리기
+	동적 페이지 가져오기
+
+jsp 오류내기 오류페이지 만들기
+	세션
+	화면가입 화면 만들기
+
+
+input_box   value="둔산동 순대국밥"

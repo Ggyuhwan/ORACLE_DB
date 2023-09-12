@@ -133,3 +133,8 @@ FROM bbs a
 START WITH bbs_no = 62
 CONNECT BY PRIOR a.bbs_no = a.parent_no
 ORDER SIBLINGS BY update_dt desc;
+
+insert into bbs(bbs_no, bbs_title, bbs_content, author_id)
+select bbs_seq.NEXTVAL,'게시글'||level,'내용'||level, 'a001'
+from dual
+CONNECT BY LEVEL <= 100;
