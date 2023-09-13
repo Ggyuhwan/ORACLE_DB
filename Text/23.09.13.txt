@@ -1,0 +1,18 @@
+23.09.13
+직업훈련 교사
+OCR(Optical Character Recognition)
+https://github.com/leeapgil/study-summary/blob/master/Python-OCR.md
+
+파이썬
+	EasyOCR 사용해보기
+개인 프로젝트
+
+스프링 cookie, board
+-로그아웃 
+-에러 페이지
+-게시판   
+	보드컨트롤러 > 보드뷰 > top > href="${pageContext.request.contextPath}/boardView" 경로설정
+-게시판 db만들기 > 매핑될 보드 VO생성
+-마이페이지
+-채팅
+-배포

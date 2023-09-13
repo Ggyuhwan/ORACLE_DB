@@ -16,4 +16,4 @@ mybatis폴더안에 mapper > member.xml 만들기
 쿼리>다오>서비스
 WEB-INF 안에 inc폴더 > top.jsp, footer.jsp
 
-web.xml > root-context-xml 서블릿컨텍스트,DB정보, 경로맵핑, 맵퍼 >  
+web.xml > root-context-xml 서블릿컨텍스트,DB정보, 경로맵핑, 맵퍼 > 보드.xml  
